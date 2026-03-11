@@ -2,6 +2,7 @@ import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import dotenv from "dotenv";
 
+dotenv.config();
 // Cấu hình Swagger
 const options = {
   definition: {
@@ -18,11 +19,11 @@ const options = {
     },
     servers: [
       {
-        url: process.env.URL_API,
+        url: process.env.URL_API || "http://localhost:3001",
         description: "Development Server",
       },
       {
-        url: process.env.URL_API,
+        url: process.env.URL_API || "http://localhost:3001",
         description: "Local Server",
       },
     ],
