@@ -18,11 +18,11 @@ const options = {
     },
     servers: [
       {
-        url: dotenv.config().parsed.URL_API,
+        url: process.env.URL_API,
         description: "Development Server",
       },
       {
-        url: dotenv.config().parsed.URL_API,
+        url: process.env.URL_API,
         description: "Local Server",
       },
     ],
