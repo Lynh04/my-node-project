@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js"; // Nhớ đuôi .js
 import userRoutes from "./routes/userRoutes.js"; // Nhớ đuôi .js
+import { setupSwagger } from "./swagger.js"; // Import Swagger setup
 
 // Load biến môi trường
 dotenv.config();
@@ -14,6 +15,9 @@ app.use(express.json());
 
 // Kết nối Database
 connectDB();
+
+// Cấu hình Swagger UI
+setupSwagger(app);
 
 // Route gốc
 // Mọi request bắt đầu bằng /api/users sẽ đi vào userRoutes
