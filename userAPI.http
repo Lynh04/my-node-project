@@ -1,0 +1,38 @@
+//Tạo mới user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 20
+}
+
+###
+GET http://localhost:3001/api/users
+
+###
+GET http://localhost:3001/api/users/69b15fb072bc5817ae6eaf5c
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "linh@example.com",
+  "age": 21
+}
+
+###
+DELETE http://localhost:3001/api/users/69b15fb072bc5817ae6eaf5c
+
+###
+PUT http://localhost:3001/api/users/69b1605e72bc5817ae6eaf62
+Content-Type: application/json
+
+{
+  "name": "Linh Nguyen",
+  "email": "linh@example.com",
+  "age": 21
+}
