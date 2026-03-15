@@ -3,11 +3,25 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js"; // Nhớ đuôi .js
 import userRoutes from "./routes/userRoutes.js"; // Nhớ đuôi .js
 import { setupSwagger } from "./swagger.js"; // Import Swagger setup
+import cors from "cors";
+
 
 // Load biến môi trường
 dotenv.config();
 
 const app = express();
+
+
+const allowedOrigins = [
+  "https://app.com",
+  "https://admin.app.com",
+  "http://localhost:3000"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 // Middleware quan trọng: Giúp Express hiểu được dữ liệu JSON
 // Nếu thiếu dòng này, req.body sẽ bị undefined
