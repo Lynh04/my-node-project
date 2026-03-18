@@ -16,7 +16,7 @@ const allowedOrigins = [
   "https://app.com",
   "https://admin.app.com",
   "http://localhost:3000",
-  "https://my-node-project-39g6.onrender.com/api"
+  "https://react-js-connect-node-js-begin-thuy.vercel.app/"
 ];
 
 app.use(cors({
