@@ -15,7 +15,8 @@ const app = express();
 const allowedOrigins = [
   "https://app.com",
   "https://admin.app.com",
-  "http://localhost:3000"
+  "http://localhost:3000",
+  "https://my-node-project-39g6.onrender.com/api"
 ];
 
 app.use(cors({
